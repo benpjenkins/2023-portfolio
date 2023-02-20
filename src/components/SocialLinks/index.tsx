@@ -43,7 +43,7 @@ const SocialLinks = () => {
     return (
         <div className="mt-8" >
             {socialLinks.map(link => (
-                <SocialLink name={link.name} linkText={link.linkText} linkhref={link.linkHref} />
+                <SocialLink name={link.name} linkText={link.linkText} linkhref={link.linkHref} key={link.name} />
             ))}
             <br />
         </div>
