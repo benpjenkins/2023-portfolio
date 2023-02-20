@@ -7,7 +7,8 @@ export const pageview = (url: string) => {
     });
 };
 
-// TODO: add types here
+// TODO: add types here when you use this more
+// @ts-expect-error
 export const event = ({ action, category, label, value }) => {
     // @ts-expect-error
     window.gtag("event", action, {
