@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from "react";
 import * as gtag from "../lib/analytics"
 import Layout from "@/components/Layout"
+import { ThemeProvider } from 'next-themes'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
@@ -38,9 +39,11 @@ export default function App({ Component, pageProps }: AppProps) {
         `,
         }}
       />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   )
 }

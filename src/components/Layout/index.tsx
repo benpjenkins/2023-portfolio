@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import DarkModeToggle from '../DarkModeToggle';
 
 
 
@@ -19,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <main>
+                <DarkModeToggle />
                 <h1>Ben Jenkins</h1>
                 <div className="nav">
                     <Link href="/">About</Link>
