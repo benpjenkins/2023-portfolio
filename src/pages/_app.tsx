@@ -9,11 +9,9 @@ import Layout from "@/components/Layout"
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log('GA_MEASUREMENT_ID', GA_MEASUREMENT_ID)
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      console.log('handle route change')
       gtag.pageview(url);
     };
 
