@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 
 
+
 type LayoutProps = {
     children: ReactNode;
 }

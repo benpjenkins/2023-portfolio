@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { useRouter } from 'next/router';
 import { useEffect } from "react";
 import * as gtag from "../lib/analytics"
+import Layout from "@/components/Layout"
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
@@ -39,7 +40,9 @@ export default function App({ Component, pageProps }: AppProps) {
         `,
         }}
       />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }
