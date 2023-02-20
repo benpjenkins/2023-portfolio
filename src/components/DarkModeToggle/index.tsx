@@ -25,7 +25,7 @@ const DarkModeToggle = () => {
                 />
 
                 <label
-                    className="inline-block pl-[0.15rem] hover:cursor-pointer"
+                    className="inline-block pl-[0.15rem] hover:cursor-pointer text-gray-800 dark:text-gray-200 font-semibold"
                     htmlFor="flexSwitchChecked"
                 >Dark Mode
                 </label>
