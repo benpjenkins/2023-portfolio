@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 // import Container from '../../components/container'
-// import PostBody from '../../components/post-body'
+import PostBody from '@/components/PostBody'
 // import Header from '../../components/header'
 // import PostHeader from '../../components/post-header'
 // import Layout from '../../components/layout'
@@ -25,7 +25,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         return <ErrorPage statusCode={404} />
     }
     return (
-        <h1>{title}</h1>
+        <PostBody content={post.content} />
     )
 }
 

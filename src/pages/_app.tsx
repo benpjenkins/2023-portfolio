@@ -10,6 +10,7 @@ import { ThemeProvider } from 'next-themes'
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function App({ Component, pageProps }: AppProps) {
+
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {

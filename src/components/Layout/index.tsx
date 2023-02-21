@@ -28,12 +28,11 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
                 <div className="flex justify-end mb-2">
                     {/* TODO: extract link to a re-usable component to de-dupe styles */}
                     <Link className='text-gray-700 visited:text-gray-800 dark:text-gray-300 visited:dark:text-gray-200 padding px-2 underline text-xl' href="/">About</Link>
-                    {/* TODO: un-comment Posts after CMS is implemented */}
-                    {/* <Link className='text-gray-700 visited:text-gray-800  dark:text-gray-300 visited:dark:text-gray-200 padding px-2 underline text-xl' href="/posts ">Posts</Link> */}
+                    <Link className='text-gray-700 visited:text-gray-800  dark:text-gray-300 visited:dark:text-gray-200 padding px-2 underline text-xl' href="/posts ">Posts</Link>
                 </div>
                 {children}
                 <SocialLinks />
-                <p className="fixed bottom-10">{new Date().getFullYear()} © Ben Jenkins</p>
+                <p>{new Date().getFullYear()} © Ben Jenkins</p>
             </main>
         </>
     )
