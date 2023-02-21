@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
                 </div>
                 {children}
                 <SocialLinks />
-                <p>{new Date().getFullYear()} © Ben Jenkins</p>
+                <p className="pb-8">{new Date().getFullYear()} © Ben Jenkins</p>
             </main>
         </>
     )
