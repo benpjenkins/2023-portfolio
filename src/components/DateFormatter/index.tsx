@@ -2,10 +2,7 @@ type Props = {
     dateString: string
 }
 
-
-
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
+const options = { dateStyle: 'long' }
 const DateFormatter = ({ dateString }: Props) => {
     const date = new Date(dateString)
     // TODO: Add types to match ones expected by data.toLocaleDateString
