@@ -1,12 +1,16 @@
-import { parseISO, format } from 'date-fns'
-
 type Props = {
     dateString: string
 }
 
+
+
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
 const DateFormatter = ({ dateString }: Props) => {
-    const date = parseISO(dateString)
-    return <time dateTime={dateString}>{format(date, 'LLLL	d, yyyy')}</time>
+    const date = new Date(dateString)
+    // TODO: Add types to match ones expected by data.toLocaleDateString
+    // @ts-expect-error
+    return <time dateTime={dateString}>{date.toLocaleDateString("en-us", options)}</time>
 }
 
 export default DateFormatter
