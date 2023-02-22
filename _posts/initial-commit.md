@@ -2,7 +2,7 @@
 title: 'Initial Commit'
 excerpt: Welcome to the first post of my new portfolio site!  I've just got a couple points today with more to come soon!
 # coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2023-02-20T17:35:07.322Z'
+date: '2023-02-20 18:00:00'
 author:
   name: Ben Jenkins
 ---
