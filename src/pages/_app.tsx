@@ -1,16 +1,15 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Script from 'next/script'
-import { useRouter } from 'next/router';
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import Script from "next/script";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
-import * as gtag from "../lib/analytics"
-import Layout from "@/components/Layout"
-import { ThemeProvider } from 'next-themes'
+import * as gtag from "../lib/analytics";
+import Layout from "@/components/Layout";
+import { ThemeProvider } from "next-themes";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default function App({ Component, pageProps }: AppProps) {
-
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -25,9 +24,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.events]);
   return (
     <>
-      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
       <Script
-        id='google-analytics'
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -46,5 +48,5 @@ export default function App({ Component, pageProps }: AppProps) {
         </Layout>
       </ThemeProvider>
     </>
-  )
+  );
 }

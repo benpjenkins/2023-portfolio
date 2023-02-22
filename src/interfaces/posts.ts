@@ -1,13 +1,13 @@
-import type Author from './author'
+import type Author from "./author";
 
 type PostType = {
-    slug: string
-    title: string
-    date: string
-    coverImage: string
-    author: Author
-    excerpt: string
-    content: string
-}
+  slug: string;
+  title: string;
+  date: string;
+  coverImage: string;
+  author: Author;
+  excerpt: string;
+  content: string;
+};
 
-export default PostType
+export default PostType;
