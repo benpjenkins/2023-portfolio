@@ -16,11 +16,6 @@ const socialLinks = [
     linkHref: "https://www.linkedin.com/in/benpjenkins/",
   },
   {
-    name: "Twitter",
-    linkText: "@benjenkinsdev",
-    linkHref: "https://twitter.com/benjenkinsdev",
-  },
-  {
     name: "Email",
     linkText: "ben@benjenkins.dev",
     linkHref: "mailto:ben@benjenkins.dev",
